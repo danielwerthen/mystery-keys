@@ -16,7 +16,8 @@ export default class Content extends React.Component {
     client
       .getEntries({
         content_type: 'page',
-        'fields.slug': this.props.path,
+        'fields.slug':
+          this.props.path === '/' ? '/' : this.props.path.substr(1),
         include: 5,
       })
       .then(response => {

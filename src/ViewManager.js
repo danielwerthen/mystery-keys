@@ -8,13 +8,15 @@ const contents = {
 };
 
 function ContentView({ sys, fields }) {
+  if (!sys) {
+    return <p>Something went wrong</p>;
+  }
   const type = sys.contentType.sys.id;
   const Component = contents[type];
   return <Component {...fields} />;
 }
 
 export default function ViewManager() {
-  const path = window.location.pathname;
-  const { title, description } = {};
+  const path = window.location.pathname.replace('/mystery-keys', '');
   return <Content path={path}>{props => <ContentView {...props} />}</Content>;
 }
