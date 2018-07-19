@@ -4,12 +4,18 @@
   "version": "0.1.1",
   "private": false,
   "dependencies": {
-    "firebase": "^5.2.0",
+    "@firebase/app-types": "^0.3.2",
+    "contentful": "^6.1.1",
+    "contentful-resolve-response": "^1.1.4",
+    "create-react-context": "^0.2.2",
     "gh-pages": "^1.2.0",
+    "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
-    "stilren": "^0.0.4"
+    "stilren": "^0.0.4",
+    "styletron-engine-atomic": "^1.0.5",
+    "styletron-standard": "^1.0.3"
   },
   "scripts": {
     "predeploy": "npm run build",
