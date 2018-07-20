@@ -1,8 +1,8 @@
 {
   "name": "mystery-keys",
   "homepage": "https://danielwerthen.github.io/mystery-keys/",
-  "version": "0.1.1",
-  "private": false,
+  "version": "0.1.2",
+  "private": true,
   "dependencies": {
     "@firebase/app-types": "^0.3.2",
     "contentful": "^6.1.1",

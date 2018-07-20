@@ -4,7 +4,8 @@ import Mystery from './Mystery';
 function navTo(page) {
   return () => {
     setTimeout(() => {
-      window.location.pathname = page ? page.fields.slug : '/complete';
+      window.location.pathname =
+        '/mystery-keys' + (page ? page.fields.slug : '/complete');
     }, 500);
   };
 }
