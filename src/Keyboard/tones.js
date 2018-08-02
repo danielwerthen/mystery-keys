@@ -1,50 +1,50 @@
 export default [
   {
+    label: 'C',
+    freq: 130.81,
+  },
+  {
+    label: 'C#',
+    freq: 138.59,
+  },
+  {
+    label: 'D',
+    freq: 146.83,
+  },
+  {
+    label: 'D#',
+    freq: 155.56,
+  },
+  {
+    label: 'E',
+    freq: 164.81,
+  },
+  {
     label: 'F',
     freq: 174.61,
   },
   {
     label: 'F#',
-    freq: 185
+    freq: 185,
   },
   {
     label: 'G',
-    freq: 196
+    freq: 196,
   },
   {
     label: 'G#',
-    freq: 207.65
+    freq: 207.65,
   },
   {
     label: 'A',
-    freq: 220
+    freq: 220,
   },
   {
     label: 'A#',
-    freq: 233.08
+    freq: 233.08,
   },
   {
     label: 'B',
-    freq: 246.94
+    freq: 246.94,
   },
-  {
-    label: 'C',
-    freq: 261.63
-  },
-  {
-    label: 'C#',
-    freq: 277.18
-  },
-  {
-    label: 'D',
-    freq: 293.66
-  },
-  {
-    label: 'D#',
-    freq: 311.13
-  },
-  {
-    label: 'E',
-    freq: 329.63
-  },
-]
+];
