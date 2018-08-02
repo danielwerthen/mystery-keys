@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Keyboard from './Keyboard';
+import TunePlayer from './TunePlayer';
 
 export default class TuneValidator extends Component {
   state = { history: [] };
@@ -22,6 +23,11 @@ export default class TuneValidator extends Component {
     });
   };
   render() {
-    return <Keyboard {...this.props} onTonePress={this.tonePress} />;
+    return (
+      <React.Fragment>
+        <Keyboard {...this.props} onTonePress={this.tonePress} />
+        <TunePlayer {...this.props} />
+      </React.Fragment>
+    );
   }
 }

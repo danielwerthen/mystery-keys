@@ -65,7 +65,7 @@ function isBlack(tone) {
 
 export default class Keyboard extends Component {
   render() {
-    const { tones, onTonePress, octaveMultiplier } = this.props;
+    const { tones, onTonePress, octave } = this.props;
     return (
       <div
         className="keys"
@@ -76,7 +76,7 @@ export default class Keyboard extends Component {
         {tones.map((tone, id) => (
           <Key
             className={isBlack(tone) ? 'black' : 'white'}
-            frequency={tone.freq * octaveMultiplier}
+            frequency={tone.freq * octave}
             key={id}
             onKeyPress={() => onTonePress && onTonePress(tone)}
           />
@@ -88,5 +88,5 @@ export default class Keyboard extends Component {
 
 Keyboard.defaultProps = {
   tones: defaultTones,
-  octaveMultiplier: 2,
+  octave: 2,
 };
