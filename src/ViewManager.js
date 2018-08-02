@@ -17,6 +17,6 @@ function ContentView({ sys, fields }) {
 }
 
 export default function ViewManager() {
-  const path = window.location.pathname.replace('/mystery-keys', '');
+  const path = window.location.hash || '/';
   return <Content path={path}>{props => <ContentView {...props} />}</Content>;
 }

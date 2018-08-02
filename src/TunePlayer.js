@@ -102,4 +102,5 @@ export default class TunePlayer extends React.Component {
 
 TunePlayer.defaultProps = {
   durationMultiplier: 0.8,
+  rythm: [],
 };
