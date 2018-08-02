@@ -1,6 +1,6 @@
 import React from 'stilren/react';
 import tones from './Keyboard/tones';
-var context = new AudioContext();
+import context from './AudioContext';
 
 function createTone(frequency) {
   const o = context.createOscillator();

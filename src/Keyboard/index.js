@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import defaultTones from './tones';
-
-var context = new AudioContext();
+import context from '../AudioContext';
 
 class Key extends Component {
   componentWillMount() {
