@@ -42,12 +42,15 @@ class Key extends Component {
     this.stop();
   };
   render() {
+    const isTouch = 'ontouchstart' in window;
     const { frequency, onKeyPress, ...rest } = this.props;
     return (
       <div
         {...rest}
-        onMouseDown={this.onMouseDown}
-        onMouseUp={this.onMouseUp}
+        onTouchStart={isTouch ? this.onMouseDown : undefined}
+        onTouchEnd={isTouch ? this.onMouseUp : undefined}
+        onMouseDown={!isTouch ? this.onMouseDown : undefined}
+        onMouseUp={!isTouch ? this.onMouseUp : undefined}
         onMouseLeave={this.onMouseLeave}
       />
     );
@@ -66,12 +69,7 @@ export default class Keyboard extends Component {
   render() {
     const { tones, onTonePress, octave } = this.props;
     return (
-      <div
-        className="keys"
-        style={{
-          width: `${tones.filter(tone => !isBlack(tone)).length * '52'}px`,
-        }}
-      >
+      <div className="keys">
         {tones.map((tone, id) => (
           <Key
             className={isBlack(tone) ? 'black' : 'white'}

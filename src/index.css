@@ -15,8 +15,9 @@ body {
 .black {
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 180px;
+  width: 13vw;
+  max-width: 80px;
+  height: 240px;
   margin: 0 2px 2px 0;
   background: #fff;
   cursor: pointer;
@@ -43,10 +44,11 @@ body {
   content: '';
   position: absolute;
   top: -2px;
-  left: -16px;
+  transform: translateX(-55%);
   display: block;
-  width: 32px;
-  height: 117px;
+  width: 8vw;
+  max-width: 55px;
+  height: 135px;
   background: #000;
   border-radius: 0 0 4px 4px;
   box-shadow: 1px 1px 0 #555, 2px 2px 0 #555;
