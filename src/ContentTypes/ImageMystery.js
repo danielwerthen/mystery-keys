@@ -22,6 +22,7 @@ export default function ImageMystery({ image, password, onValid }) {
           $display="block"
           $margin="auto"
           $maxWidth="90%"
+          $maxHeight="60%"
         >
           Sorry, your browser doesn't support embedded videos.
         </video>
