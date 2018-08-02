@@ -5,7 +5,7 @@ function navTo(page) {
   return () => {
     setTimeout(() => {
       window.location.pathname =
-        '/mystery-keys' + (page ? page.fields.slug : '/complete');
+        '/mystery-keys/' + (page ? page.fields.slug : '/complete');
     }, 500);
   };
 }
