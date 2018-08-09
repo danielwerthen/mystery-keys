@@ -37,17 +37,19 @@ export default function ImageMystery({ image, password, onValid }) {
           alt={image.fields.title}
         />
       )}
-      <input
-        $background="#EEE"
-        $border="1px solid #BBB"
-        $borderRadius="5px"
-        $fontSize="16px"
-        $minWidth="256px"
-        $padding="1em"
-        $margin="2em"
-        type="text"
-        onChange={e => isMatching(e.target.value, password) && onValid()}
-      />
+      {password && (
+        <input
+          $background="#EEE"
+          $border="1px solid #BBB"
+          $borderRadius="5px"
+          $fontSize="16px"
+          $minWidth="256px"
+          $padding="1em"
+          $margin="2em"
+          type="text"
+          onChange={e => isMatching(e.target.value, password) && onValid()}
+        />
+      )}
     </div>
   );
 }
